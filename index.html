@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroEscola</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroEscola</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1><span
-class="agro">AGRO</span><span
-class="escola">ESCOLA</span></h1>
-    </header>
+  <header>
+    <h1><span class="agro">AGRO</span> <span class="escola">ESCOLA</span></h1>
+  </header>
 
-    <main class="container">
-        <div class="button-box">
-            <button onclick="alert('importância do agro nas escolas')">
-                importância do agro nas escolas
-            </button>
-            <button onclick="alert('dicas de como implementar o agro escola')">
-                dicas de como implementar o agro na escola
-            </button>
-        </div>
+  <main class="content">
+    <div class="left-side">
+      <button class="info-btn" onclick="showMessage('importancia')">Importância do agro na escola</button>
+      <button class="info-btn" onclick="showMessage('dicas')">Dicas de como implementar o agro na escola</button>
+    </div>
 
-        <div class="image-box">
-            <img src="horta.jpg" alt="foto altoral tirada no celular"
-            <p class="caption">foto altoral tirada no celular</p>
-        </div>
-    </main>  
+    <div class="quote">
+  <p>"Plantar na escola é semear conhecimento, respeito e sustentabilidade."</p>
+</div>
+
+    <div class="right-side">
+      <img src="cebolinha.jpg.jpeg" alt="foto autoral tirada no celular" class="main-image">
+    </div>
+
+    <div class="caption">foto autoral tirada no celular</div>
+  </main>
+
+  <div id="message-box" class="hidden">
+    <div id="message-content"></div>
+    <button onclick="closeMessage()">Fechar</button>
+  </div>
+
+  <script>
+    function showMessage(type) {
+      const box = document.getElementById('message-box');
+      const content = document.getElementById('message-content');
+      
+      if (type === 'importancia') {
+        content.innerText = 'O agro na escola ajuda na conscientização ambiental e na educação alimentar.';
+      } else if (type === 'dicas') {
+        content.innerText = 'Comece com uma horta simples, envolva os alunos e professores, e use o espaço como aprendizado interdisciplinar.';
+      }
+
+      box.classList.remove('hidden');
+    }
+
+    function closeMessage() {
+      document.getElementById('message-box').classList.add('hidden');
+    }
+  </script>
 </body>
 </html>
