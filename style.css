@@ -100,14 +100,3 @@ header {
     position: relative;
     display: inline-block;
 }
-
-.quote {
-  margin-top: 20px;
-  font-style: italic;
-  color: #2d6a2d;
-  background-color: #eef9ee;
-  padding: 12px;
-  border-left: 4px solid #2d6a2d;
-  max-width: 300px;
-  font-size: 14px;
-}
